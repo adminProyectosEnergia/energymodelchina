@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--Reference: http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/line-time-series/-->
+<!-- Datetime format: https://blog.emilecantin.com/web/highcharts/2014/10/26/highcharts-datetime-series.html
+                      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC -->
+<!--Time Series: https://darksky.com -->
+
+<html>
+<head>    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>    
+
+<body>
+
+<h1>China Map</h1>
+
+<div id="container" style="min-width: 310px; height: 500px; max-width: 800px; margin: 0 auto"></div>
+
+<div style="max-width: 800px; margin: 0 auto">
+<button id="button" class="autocompare">Set new data</button>
+
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/mapdata/countries/cn/cn-all.js"></script>
+<script src="https://rawgit.com/mholt/PapaParse/master/papaparse.js"></script>
+
+<!--<script src="./timeseries.js"></script>-->
+<script src="./chinamapv2.js"></script>
+
+</body>

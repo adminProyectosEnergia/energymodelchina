@@ -1,0 +1,255 @@
+{% extends "layout.html" %}
+{% block content %}
+<style type="text/css">
+	.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
+	.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
+	.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
+	.tg .tg-9hbo{font-weight:bold;vertical-align:top}
+	.tg .tg-xuzy{font-weight:bold;font-size:medium;text-align:center;vertical-align:top}
+	.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+	.tg .tg-yw4l{vertical-align:top}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!--Ref:https://www.tablesgenerator.com/html_tables#">-->
+		
+<!-- Content -->
+<div id="content-wrapper">
+	<div id="content">
+		<div class="container">
+			<div class="row">
+				<div class="9u 12u(mobile)">
+					<!-- Main Content -->
+						<section>
+							<header>
+								<h2>Electric Appliances</h2>
+								<h3>Appliance's Ownership Projection (2015-2050)</h3>
+							</header>
+
+							<a name="Introduction">Introduction</a>
+							<p>
+								The estimation of the relationship between penetration rate and income 
+								for each appliance based on provincial historical information was done using econometrics 
+								models and regression analysis. Then the future penetration was projected by assuming various scenarios of income growth.
+							</p>
+
+							<a name="Econometric">Econometric models</a>
+							<p>
+								To get the best estimation of the relationship between income and penetration of 
+								electric appliances, the following econometric models were tested:
+							</p>
+								<img src="static/img/econometric_formula.png" alt="econometric formulas" align="middle" >
+							<p>
+								k is the k-th appliance. N_k is the maximum penetration rate for k-th appliance.
+								Usually, the variables used to represent the income indicator are: household income 
+								and income per capita.
+
+								Using data from the ACMR, 2017. China Yearly Macro-Economics Statistics, the combinations of both models and variables 
+								for each appliance were used to check what is the best indicator and model that fits the data.
+
+								As the differences in income and appliance's penetration between urban and rural areas are considerable, 
+								the penetration rate and income was divided into urban and rural areas.
+							</p>
+
+							<table class="tg">
+								<tr>
+								  <th class="tg-9hbo"></th>
+								  <th class="tg-xuzy" colspan="4">Urban</th>
+								  <th class="tg-xuzy" colspan="4">Rural</th>
+								</tr>
+								<tr>
+								  <td class="tg-9hbo"></td>
+								  <td class="tg-amwm" colspan="2">Model 1</td>
+								  <td class="tg-amwm" colspan="2">Model 2</td>
+								  <td class="tg-amwm" colspan="2">Model 1</td>
+								  <td class="tg-amwm" colspan="2">Model 2</td>
+								</tr>
+								<tr>
+								  <td class="tg-9hbo">Appliance</td>
+								  <td class="tg-9hbo">Household</td>
+								  <td class="tg-9hbo">Per capita</td>
+								  <td class="tg-9hbo">Household</td>
+								  <td class="tg-9hbo">Per capita</td>
+								  <td class="tg-9hbo">Household</td>
+								  <td class="tg-9hbo">Per capita</td>
+								  <td class="tg-9hbo">Household</td>
+								  <td class="tg-9hbo">Per capita</td>
+								</tr>
+								<tr>
+								  <td class="tg-yw4l">AC (North)</td>
+								  <td class="tg-yw4l">0.67</td>
+								  <td class="tg-yw4l">0.67</td>
+								  <td class="tg-yw4l">0.72</td>
+								  <td class="tg-yw4l">0.74*</td>
+								  <td class="tg-yw4l">0.57</td>
+								  <td class="tg-yw4l">0.53</td>
+								  <td class="tg-yw4l">0.63</td>
+								  <td class="tg-yw4l">0.67*</td>
+								</tr>
+								<tr>
+								  <td class="tg-yw4l">AC (South)</td>
+								  <td class="tg-yw4l">0.75</td>
+								  <td class="tg-yw4l">0.74</td>
+								  <td class="tg-yw4l">0.78</td>
+								  <td class="tg-yw4l">0.79*</td>
+								  <td class="tg-yw4l">0.7</td>
+								  <td class="tg-yw4l">0.66</td>
+								  <td class="tg-yw4l">0.83*</td>
+								  <td class="tg-yw4l">0.83</td>
+								</tr>
+								<tr>
+								  <td class="tg-yw4l">Microwave</td>
+								  <td class="tg-yw4l">0.66</td>
+								  <td class="tg-yw4l">0.67</td>
+								  <td class="tg-yw4l">0.78</td>
+								  <td class="tg-yw4l">0.80*</td>
+								  <td class="tg-yw4l">0.69</td>
+								  <td class="tg-yw4l">0.65</td>
+								  <td class="tg-yw4l">0.78*</td>
+								  <td class="tg-yw4l">0.78</td>
+								</tr>
+								<tr>
+								  <td class="tg-yw4l">PC</td>
+								  <td class="tg-yw4l">0.75</td>
+								  <td class="tg-yw4l">0.76</td>
+								  <td class="tg-yw4l">0.87</td>
+								  <td class="tg-yw4l">0.89*</td>
+								  <td class="tg-yw4l">0.61</td>
+								  <td class="tg-yw4l">0.58</td>
+								  <td class="tg-yw4l">0.74</td>
+								  <td class="tg-yw4l">0.78*</td>
+								</tr>
+								<tr>
+								  <td class="tg-yw4l">Refrigerator</td>
+								  <td class="tg-yw4l">0.44</td>
+								  <td class="tg-yw4l">0.43</td>
+								  <td class="tg-yw4l">0.5</td>
+								  <td class="tg-yw4l">0.51*</td>
+								  <td class="tg-yw4l">0.78</td>
+								  <td class="tg-yw4l">0.74</td>
+								  <td class="tg-yw4l">0.86</td>
+								  <td class="tg-yw4l">0.89*</td>
+								</tr>
+								<tr>
+								  <td class="tg-yw4l">TV</td>
+								  <td class="tg-yw4l">0.09</td>
+								  <td class="tg-yw4l">0.10*</td>
+								  <td class="tg-yw4l">0.05</td>
+								  <td class="tg-yw4l">0.06</td>
+								  <td class="tg-yw4l">0.65</td>
+								  <td class="tg-yw4l">0.62</td>
+								  <td class="tg-yw4l">0.71</td>
+								  <td class="tg-yw4l">0.72*</td>
+								</tr>
+								<tr>
+								  <td class="tg-yw4l">Washer</td>
+								  <td class="tg-yw4l">0.19</td>
+								  <td class="tg-yw4l">0.13</td>
+								  <td class="tg-yw4l">0.19</td>
+								  <td class="tg-yw4l">0.20*</td>
+								  <td class="tg-yw4l">0.75</td>
+								  <td class="tg-yw4l">0.76</td>
+								  <td class="tg-yw4l">0.79</td>
+								  <td class="tg-yw4l">0.81*</td>
+								</tr>
+							  </table>
+							<p> 
+							  * The best model for each appliance among the 4 estimations.
+							</p>
+							<a name="Projection">Appliance Ownership Projection</a>
+							<p>
+								Based on the assumptions of income and household size, combined with the relationship between 
+								penetration rate and per capita income (household income), 3  
+								scenarios of provincial penetrations for various appliances in urban and rural areas were projected. 
+								The following figure present the minimum and maximum penetration of each appliance in urban 
+								and rural areas for each province in 2050, respectively.
+								
+								The following map shows the mean appliance ownership value of each province in China in 2050. (Select appliance below the map)
+								
+							</p>
+
+							<div id="container" style="min-width: 310px; height: 500px; max-width: 800px; margin: 0 auto"></div>
+							<h3>Select Appliance</h3>
+							<div style="max-width: 800px; margin: 0 auto">
+								<form name="myForm">
+								<input type="radio" id="ac_appl" name="appliance" checked="checked" value=1 />
+								<label for="ac_appl">AC</label>
+								<input type="radio" id="microwave_appl" name="appliance" value=2 />
+								<label for="microwave_appl">Microwave</label>    
+								<input type="radio" id="pc_appl" name="appliance" value=3 />
+								<label for="pc_appl">PC</label>
+								<input type="radio" id="fridge_appl" name="appliance" value=4 />
+								<label for="fridge_appl">Refrigerator</label>
+								<input type="radio" id="tv_appl" name="appliance" value=5 />
+								<label for="tv_appl">TV</label>
+								<input type="radio" id="wash_appl" name="appliance" value=6 />
+								<label for="wash_appl">Washing Machine</label>
+							</form>
+							
+							<a name="Results">Results</a>	
+							<ul>
+								<li>Differences between urban and rural regions will narrow</li>
+								<li>Current disparities between regions will tend to disappear </li>
+								<li>Appliance penetration growth will be led by adoption of ACs and PCs</li>
+							</ul>
+
+							<a name="Future_Work">Future Work</a>
+								<ul>
+								<li>Develop a bottom-up framework to characterize electricity demand scenarios </li>
+								<li>Create a tool to forecast long-term electricity demand at the hourly temporal scale</li>
+								</ul>
+							<a name="References">References</a>
+							<p>
+								<ol type="1">
+									<li>ACMR, 2017. China Yearly Macro-Economics Statistics.</li>
+									<li>NBS, 2011a. 6th Population Census of the People’s Republic of China.</li> 
+									<li>WB, 2017. World Bank Open Data.</li>
+								</ol>						
+							</p>
+						</section>
+
+				</div>
+				<div class="3u 12u(mobile)">
+
+					<!-- Sidebar -->
+						<section>
+							<header>
+								<h2>Index</h2>
+							</header>
+							<ul class="link-list">
+								<li><a href="#Introduction">Introduction</a></li>
+								<li><a href="#Econometric">Econometric models</a></li>
+								<li><a href="#Projection">Data Analysis/Model</a></li>
+								<li><a href="#Results">Results</a></li>
+								<li><a href="#Future_Work">Future Work</a></li>
+								<li><a href="#References">References</a></li>
+							</ul>
+						</section>
+						<section>
+							<header>
+								<h2>Additional Information</h2>
+							</header>
+							<p>
+								Vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam
+								iaculis. Phasellus ultrices diam sit amet orci lacinia sed consequat.
+							</p>
+						</section>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/mapdata/countries/cn/cn-all.js"></script>
+<script src="https://rawgit.com/mholt/PapaParse/master/papaparse.js"></script>
+
+<!--<script src="./timeseries.js"></script>-->
+<script src="../static/js/chinamap.js"></script>
+
+{% endblock %}
+<!-- 		</div>-->
